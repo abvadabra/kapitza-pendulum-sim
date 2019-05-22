@@ -13,7 +13,7 @@ object Main {
     fun main(args: Array<String>) {
         UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName())
 
-        val frame = PendulumUI("Маятник Капица")
+        val frame = PendulumUI("Маятник Капицы")
         val simulation = PendulumSimulationContext(frame)
 
         val dim = Toolkit.getDefaultToolkit().screenSize

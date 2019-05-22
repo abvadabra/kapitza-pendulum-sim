@@ -17,7 +17,7 @@ class PendulumSimulationContext(val view: PendulumUI){
         }
 
     var t = 0.0
-
+    var speed = 1.0
     var isSumulating = false
 
     var equation = createEquationSolver()
@@ -34,8 +34,8 @@ class PendulumSimulationContext(val view: PendulumUI){
 
     fun tick(delta: Double){
         if(isSumulating) {
-            equation.rungeKutta4Order(t, delta)
-            t += delta
+            equation.rungeKutta4Order(t, delta * speed)
+            t += delta * speed
             view.pendulumRenderer.update()
         }
     }
@@ -47,11 +47,6 @@ class PendulumSimulationContext(val view: PendulumUI){
 
     private fun calculate(p: Double, y: DoubleArray, k: DoubleArray){
         k[0] = y[1]
-
-        //motion equation
-        //d/dt[dL/dθ] = dL/dθ
-        //d/dt[m * l^2 * θ. = m * w[f] F * l * cos(w[f] * t) * sinθ] = m*g*l*sinθ - m * w[f] * F * l * θ. * cos(w[f] * t) * cosθ
-        //θ.. = 1 / l * (g * sinθ - w[f]^2 * F * sin(w[f] * t] * sinθ)
         k[1] = (G - forcingFreq * forcingFreq * forcingAmplitude * sin(forcingFreq * p)) * sin(y[0]) / armLength
     }
 

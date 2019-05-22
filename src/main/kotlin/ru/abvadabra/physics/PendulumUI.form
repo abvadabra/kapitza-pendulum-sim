@@ -25,14 +25,16 @@
             <children>
               <component id="e9a7e" class="javax.swing.JSlider" binding="lengthSlider">
                 <constraints border-constraint="West"/>
-                <properties/>
+                <properties>
+                  <preferredSize width="170" height="16"/>
+                </properties>
               </component>
               <component id="ffe4" class="javax.swing.JLabel">
                 <constraints border-constraint="East"/>
                 <properties>
                   <font/>
                   <labelFor value="fcff7"/>
-                  <text value="Длина маятника"/>
+                  <text value="Длина маятника (м)"/>
                 </properties>
               </component>
               <component id="fcff7" class="javax.swing.JTextField" binding="lengthField">
@@ -49,7 +51,9 @@
                 <children>
                   <component id="72703" class="javax.swing.JSlider" binding="initialAngleSlider">
                     <constraints border-constraint="West"/>
-                    <properties/>
+                    <properties>
+                      <preferredSize width="170" height="16"/>
+                    </properties>
                   </component>
                   <component id="21469" class="javax.swing.JTextField" binding="initialAngleField">
                     <constraints border-constraint="Center"/>
@@ -60,7 +64,7 @@
                   <component id="c886d" class="javax.swing.JLabel">
                     <constraints border-constraint="East"/>
                     <properties>
-                      <text value="Начальный угол"/>
+                      <text value="Начальный угол (рад)"/>
                     </properties>
                   </component>
                   <grid id="2365a" layout-manager="BorderLayout" hgap="5" vgap="0">
@@ -70,7 +74,9 @@
                     <children>
                       <component id="175c0" class="javax.swing.JSlider" binding="initialAngularVelocitySlider">
                         <constraints border-constraint="West"/>
-                        <properties/>
+                        <properties>
+                          <preferredSize width="170" height="16"/>
+                        </properties>
                       </component>
                       <component id="f14af" class="javax.swing.JTextField" binding="initialAngularVelocityField">
                         <constraints border-constraint="Center"/>
@@ -79,7 +85,7 @@
                       <component id="db4f5" class="javax.swing.JLabel">
                         <constraints border-constraint="East"/>
                         <properties>
-                          <text value="Скорость поворота"/>
+                          <text value="Нач. скорость поворота (м/c)"/>
                         </properties>
                       </component>
                       <grid id="cfb08" layout-manager="BorderLayout" hgap="5" vgap="0">
@@ -89,7 +95,9 @@
                         <children>
                           <component id="5f668" class="javax.swing.JSlider" binding="forcingAmplitudeSlider">
                             <constraints border-constraint="West"/>
-                            <properties/>
+                            <properties>
+                              <preferredSize width="170" height="16"/>
+                            </properties>
                           </component>
                           <component id="f8705" class="javax.swing.JTextField" binding="forcingAmplitudeField">
                             <constraints border-constraint="Center"/>
@@ -98,7 +106,7 @@
                           <component id="fee13" class="javax.swing.JLabel">
                             <constraints border-constraint="East"/>
                             <properties>
-                              <text value="Амплитуда колебаний"/>
+                              <text value="Амплитуда колебаний (м)"/>
                             </properties>
                           </component>
                           <grid id="72dc5" layout-manager="BorderLayout" hgap="5" vgap="0">
@@ -108,7 +116,10 @@
                             <children>
                               <component id="c869a" class="javax.swing.JSlider" binding="forcingFrequencySlider">
                                 <constraints border-constraint="West"/>
-                                <properties/>
+                                <properties>
+                                  <preferredSize width="170" height="16"/>
+                                  <requestFocusEnabled value="false"/>
+                                </properties>
                               </component>
                               <component id="af1f" class="javax.swing.JTextField" binding="forcingFrequencyField">
                                 <constraints border-constraint="Center"/>
@@ -117,9 +128,32 @@
                               <component id="4978e" class="javax.swing.JLabel">
                                 <constraints border-constraint="East"/>
                                 <properties>
-                                  <text value="Частота колебаний"/>
+                                  <text value="Частота колебаний (герц)"/>
                                 </properties>
                               </component>
+                              <grid id="72512" layout-manager="BorderLayout" hgap="5" vgap="0">
+                                <constraints border-constraint="South"/>
+                                <properties/>
+                                <border type="none"/>
+                                <children>
+                                  <component id="f8fbc" class="javax.swing.JSlider" binding="speedSlider">
+                                    <constraints border-constraint="West"/>
+                                    <properties>
+                                      <preferredSize width="170" height="16"/>
+                                    </properties>
+                                  </component>
+                                  <component id="b2777" class="javax.swing.JTextField" binding="speedField">
+                                    <constraints border-constraint="Center"/>
+                                    <properties/>
+                                  </component>
+                                  <component id="a00d2" class="javax.swing.JLabel">
+                                    <constraints border-constraint="East"/>
+                                    <properties>
+                                      <text value="Скорость симуляции"/>
+                                    </properties>
+                                  </component>
+                                </children>
+                              </grid>
                             </children>
                           </grid>
                         </children>
@@ -132,7 +166,7 @@
           </grid>
         </children>
       </grid>
-      <tabbedpane id="5b4b3" binding="tabbedPane1" default-binding="true">
+      <tabbedpane id="5b4b3" binding="tabbedPane">
         <constraints border-constraint="Center"/>
         <properties/>
         <border type="none"/>
@@ -146,17 +180,11 @@
             <children>
               <component id="9315d" class="ru.abvadabra.physics.PendulumRenderer" binding="pendulumRenderer">
                 <constraints border-constraint="Center"/>
-                <properties/>
+                <properties>
+                  <focusable value="false"/>
+                </properties>
               </component>
             </children>
-          </grid>
-          <grid id="9f397" layout-manager="GridBagLayout">
-            <constraints>
-              <tabbedpane title="График"/>
-            </constraints>
-            <properties/>
-            <border type="none"/>
-            <children/>
           </grid>
         </children>
       </tabbedpane>
