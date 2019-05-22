@@ -1,3 +1,5 @@
+package ru.abvadabra.physics
+
 class DiffEquationSolver(val params: Int, val dataProvider: (Double, DoubleArray, DoubleArray) -> Unit) {
 
     private val data = Array(7) { DoubleArray(params) }

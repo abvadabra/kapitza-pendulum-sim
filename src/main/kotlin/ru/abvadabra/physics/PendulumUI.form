@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ru.abvadabra.physics.PendulumUI">
+  <grid id="27dc6" binding="root" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="470" height="581"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="f786c" binding="controlsPane" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints border-constraint="South"/>
+        <properties/>
+        <border type="etched"/>
+        <children>
+          <component id="30189" class="javax.swing.JButton" binding="startSimulationButton">
+            <constraints border-constraint="Center"/>
+            <properties>
+              <text value="Запустить симуляцию"/>
+            </properties>
+          </component>
+          <grid id="84932" layout-manager="BorderLayout" hgap="5" vgap="0">
+            <constraints border-constraint="North"/>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="e9a7e" class="javax.swing.JSlider" binding="lengthSlider">
+                <constraints border-constraint="West"/>
+                <properties/>
+              </component>
+              <component id="ffe4" class="javax.swing.JLabel">
+                <constraints border-constraint="East"/>
+                <properties>
+                  <font/>
+                  <labelFor value="fcff7"/>
+                  <text value="Длина маятника"/>
+                </properties>
+              </component>
+              <component id="fcff7" class="javax.swing.JTextField" binding="lengthField">
+                <constraints border-constraint="Center"/>
+                <properties>
+                  <columns value="10"/>
+                  <preferredSize width="116" height="30"/>
+                </properties>
+              </component>
+              <grid id="627f6" layout-manager="BorderLayout" hgap="5" vgap="0">
+                <constraints border-constraint="South"/>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="72703" class="javax.swing.JSlider" binding="initialAngleSlider">
+                    <constraints border-constraint="West"/>
+                    <properties/>
+                  </component>
+                  <component id="21469" class="javax.swing.JTextField" binding="initialAngleField">
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <columns value="10"/>
+                    </properties>
+                  </component>
+                  <component id="c886d" class="javax.swing.JLabel">
+                    <constraints border-constraint="East"/>
+                    <properties>
+                      <text value="Начальный угол"/>
+                    </properties>
+                  </component>
+                  <grid id="2365a" layout-manager="BorderLayout" hgap="5" vgap="0">
+                    <constraints border-constraint="South"/>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="175c0" class="javax.swing.JSlider" binding="initialAngularVelocitySlider">
+                        <constraints border-constraint="West"/>
+                        <properties/>
+                      </component>
+                      <component id="f14af" class="javax.swing.JTextField" binding="initialAngularVelocityField">
+                        <constraints border-constraint="Center"/>
+                        <properties/>
+                      </component>
+                      <component id="db4f5" class="javax.swing.JLabel">
+                        <constraints border-constraint="East"/>
+                        <properties>
+                          <text value="Скорость поворота"/>
+                        </properties>
+                      </component>
+                      <grid id="cfb08" layout-manager="BorderLayout" hgap="5" vgap="0">
+                        <constraints border-constraint="South"/>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="5f668" class="javax.swing.JSlider" binding="forcingAmplitudeSlider">
+                            <constraints border-constraint="West"/>
+                            <properties/>
+                          </component>
+                          <component id="f8705" class="javax.swing.JTextField" binding="forcingAmplitudeField">
+                            <constraints border-constraint="Center"/>
+                            <properties/>
+                          </component>
+                          <component id="fee13" class="javax.swing.JLabel">
+                            <constraints border-constraint="East"/>
+                            <properties>
+                              <text value="Амплитуда колебаний"/>
+                            </properties>
+                          </component>
+                          <grid id="72dc5" layout-manager="BorderLayout" hgap="5" vgap="0">
+                            <constraints border-constraint="South"/>
+                            <properties/>
+                            <border type="none"/>
+                            <children>
+                              <component id="c869a" class="javax.swing.JSlider" binding="forcingFrequencySlider">
+                                <constraints border-constraint="West"/>
+                                <properties/>
+                              </component>
+                              <component id="af1f" class="javax.swing.JTextField" binding="forcingFrequencyField">
+                                <constraints border-constraint="Center"/>
+                                <properties/>
+                              </component>
+                              <component id="4978e" class="javax.swing.JLabel">
+                                <constraints border-constraint="East"/>
+                                <properties>
+                                  <text value="Частота колебаний"/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                        </children>
+                      </grid>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <tabbedpane id="5b4b3" binding="tabbedPane1" default-binding="true">
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="36a67" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints>
+              <tabbedpane title="Маятник"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="9315d" class="ru.abvadabra.physics.PendulumRenderer" binding="pendulumRenderer">
+                <constraints border-constraint="Center"/>
+                <properties/>
+              </component>
+            </children>
+          </grid>
+          <grid id="9f397" layout-manager="GridBagLayout">
+            <constraints>
+              <tabbedpane title="График"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children/>
+          </grid>
+        </children>
+      </tabbedpane>
+    </children>
+  </grid>
+</form>
